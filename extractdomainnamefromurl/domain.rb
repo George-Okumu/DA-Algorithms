@@ -4,7 +4,6 @@ def domain_name(url)
       host_name = URI.parse(url).host.split(".");
       # delete www if incase exists
       domain_name = host_name -= %w{www}
-      print domain_name
       domain_name[0]
     elsif url.include? "www"
       url.split(".")[1]
